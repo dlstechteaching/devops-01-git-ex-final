@@ -8,9 +8,11 @@ var hbs = require('hbs');
 app.set('views', path.join(__dirname))
 app.set('view engine', 'hbs')
 
+const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 app.get('/', function (req, res) {
 	res.render('./views/Home', {
 		title: 'My new title',
+		today: months[new Date().getMonth()],
 		cards: [
 			{
 				title: 'Our Changing Planet',
