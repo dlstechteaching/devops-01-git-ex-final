@@ -2,15 +2,18 @@ var express = require('express');
 var app = express();
 var path = require('path');
 var hbs = require('hbs');
-
-
+const monthNames = ["January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December"
+];
+const date = new Date();
+const currentMonth = monthNames[date.getMonth()];
 // View Engine Setup
 app.set('views', path.join(__dirname))
 app.set('view engine', 'hbs')
 
 app.get('/', function (req, res) {
 	res.render('./views/Home', {
-		title: 'My new title',
+		title: currentMonth,
 		cards: [
 			{
 				title: 'Our Changing Planet',
