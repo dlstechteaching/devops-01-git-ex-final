@@ -43,3 +43,4 @@ yarn start
 Contributors names and contact info
 
 - Dls
+- Chehrazad Ouazzani
