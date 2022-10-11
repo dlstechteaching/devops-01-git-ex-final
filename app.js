@@ -3,6 +3,8 @@ var app = express();
 var path = require('path');
 var hbs = require('hbs');
 
+const tableau = ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'];
+const date =new Date().getMonth();
 
 // View Engine Setup
 app.set('views', path.join(__dirname))
@@ -10,6 +12,7 @@ app.set('view engine', 'hbs')
 
 app.get('/', function (req, res) {
 	res.render('./views/Home', {
+		month: tableau[date],
 		title: 'My new title',
 		cards: [
 			{
