@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "start": "nodemon app.js",
-	"commit": "cz",
+    "commit": "cz",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -17,7 +17,8 @@
     "nodemon": "^2.0.20"
   },
   "dependencies": {
-    "hbs": "^4.2.0"
+    "hbs": "^4.2.0",
+    "yarn": "^1.22.19"
   },
   "config": {
     "commitizen": {
