@@ -12,7 +12,7 @@ app.set('view engine', 'hbs')
 
 app.get('/', function (req, res) {
 	res.render('./views/Home', {
-		title: 'FS',
+		title: 'DLFS',
 		currentMonth: months[currentMonth],
 		cards: [
 			{
