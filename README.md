@@ -42,4 +42,4 @@ yarn start
 
 Contributors names and contact info
 
-- tfou dls ici c'est souli 
+- tfou dls ici c'est soulito okk 
