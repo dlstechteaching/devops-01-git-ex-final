@@ -14,7 +14,8 @@ jobs:
         with:
           node-version: 16.14
       - run: npm ci
-   code_quality:
+
+  code_quality:
     runs-on: ubuntu-latest
     needs: [install]
     steps:
@@ -25,7 +26,8 @@ jobs:
       - run: npm ci
       - run: npm run lint
       - run: npm run prettier
-    test:
+
+  test:
     runs-on: ubuntu-latest
     needs: [install]
     steps:
@@ -33,8 +35,10 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 16.14
+      - run: npm ci
       - run: npm run test
-    build:
+
+  build:
     runs-on: ubuntu-latest
     needs: [install]
     steps:
